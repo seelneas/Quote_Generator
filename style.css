@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 20s infinite ease-in-out;
+}
+
+.quote-box{
+width: 700px;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+padding:40px;
+border-radius: 10px;
+text-align: center;
+
+}
+
+.quote-box h2{
+    color:#1D1A39;
+    font-size: 50px;
+    margin-bottom: 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.quote-box h2::after{
+content:'';
+width:75px;
+height:3px;
+border-radius: 3px;
+background: #F1916D;
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+
+}
+
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+}
+
+.quote-box span{
+    display: block;
+    margin-top:10 px;
+    float:right;
+    position: relative;
+}
+
+.quote-box span::before{
+    content: '';
+    width:20px;
+    height:2px;
+    background: #F1916D;
+    position: absolute;
+    top:50%;
+    left:-30px;
+}
+
+.quote-box div{
+    width:100%;
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.quote-box button{
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.quote-box button:active {
+    scale: 0.92;
+  }
+  
+  .quote-box button:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+  }
+
+
+.quote-box button:nth-child(2){
+    background:transparent;
+    color:#333;
+}
+
+#quote{
+    color:#B51A2B;
+}
+
+@keyframes change{
+    0%{
+        background-image:url(nature.jpg) ;
+    }
+    35%{
+        background-image: url(back.jpg);
+    }
+    70%{
+        background-image: url(pc.jpeg);
+    }
+    0%{
+        background-image: url(img.webp);
+    }
+}
